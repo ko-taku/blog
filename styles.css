@@ -63,6 +63,18 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+ol {
+    margin-left: 20px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+ul ul {
+    margin-left: 20px;
+}
+
 main {
     max-width: 800px;
     margin: 0 auto;
