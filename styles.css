@@ -24,7 +24,7 @@ body {
 header {
     text-align: center;
     padding: 20px 0;
-    background-color: #4caf50;
+    background-color: #648cb1;
     color: white;
 }
 
@@ -38,7 +38,7 @@ header p {
 }
 
 nav {
-    background-color: #333;
+    background-color: #804f4f;
     margin: 20px 0;
 }
 
@@ -86,9 +86,10 @@ main {
 
 main h2 {
     font-size: 1.8em;
-    color: #4caf50;
+    color: #648cb1;
     margin-bottom: 10px;
 }
+
 
 section {
     margin-bottom: 30px;
@@ -104,7 +105,7 @@ article {
 
 article h3 {
     font-size: 1.4em;
-    color: #333;
+    color: #9f66b7;
     margin-bottom: 5px;
 }
 
