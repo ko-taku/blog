@@ -68,11 +68,20 @@ ol {
 }
 
 ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
     margin-left: 20px;
 }
 
 ul ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
     margin-left: 20px;
+}
+
+ul li {
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 main {
