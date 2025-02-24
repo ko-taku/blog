@@ -1,0 +1,126 @@
+<h2>20250131 TIL</h2>
+<article>
+    <h3>OT</h3>
+    <ul>
+        <li>전반적인 채용시장</li>
+        <li>커리큘럼</li>
+        <li>어떠한 채용 전략을 가지고 있는지</li>
+        <li>개인의 매력을 향상시킨다</li>
+    </ul>
+
+    <h3>마크다운 사용법</h3>
+    <ul>
+        <li>마크다운 사용법 가이드</li>
+    </ul>
+
+    <h3>CLI 기본 명령어</h3>
+    <ul>
+        <li><strong>기본 명령어</strong></li>
+        <ul>
+            <li>~ : root</li>
+        </ul>
+
+        <li><strong>파일 및 디렉토리 관리</strong></li>
+        <ul>
+            <li>pwd: 현재 작업 중인 디렉토리 확인</li>
+            <li>ls: 디렉토리 내 파일 및 폴더 목록 보기</li>
+            <li>cd: 디렉토리 이동</li>
+            <ul>
+                <li>.. : 상위 폴더 (한 단계 상위 폴더로 이동 cd .. | 두 단계 상위 폴더로 이동 : cd ../..)</li>
+            </ul>
+            <li>mkdir: 디렉토리 생성</li>
+            <li>touch: 빈 파일 생성</li>
+            <li>cp: 파일 복사</li>
+            <li>mv: 파일 이동 또는 이름 변경</li>
+            <li>rm: 파일 삭제</li>
+            <li>rmdir: 빈 디렉토리 삭제</li>
+        </ul>
+
+        <li><strong>시스템 정보 확인</strong></li>
+        <ul>
+            <li>whoami: 현재 사용자 확인</li>
+            <li>uname: 시스템 정보 확인</li>
+            <li>df: 디스크 사용량 확인</li>
+            <li>top 또는 htop: 시스템 프로세스 확인</li>
+        </ul>
+
+        <li><strong>기타 유용한 명령어</strong></li>
+        <ul>
+            <li>clear: 터미널 화면 정리</li>
+            <li>history: 명령어 기록 확인</li>
+            <li>man: 명령어 매뉴얼 확인 (예: man ls)</li>
+        </ul>
+
+        <li><strong>파일 내용 조회 및 편집</strong></li>
+        <ul>
+            <li>cat: 파일 내용 출력</li>
+            <li>more 또는 less: 파일 내용 페이지 단위로 출력</li>
+            <li>head: 파일의 앞부분 출력</li>
+            <li>tail: 파일의 끝부분 출력</li>
+            <li>grep: 파일 내 특정 문자열 검색</li>
+            <li>nano 또는 vim: CLI 기반 텍스트 편집기 사용</li>
+        </ul>
+
+        <li><strong>권한 및 사용자 관리</strong></li>
+        <ul>
+            <li>chmod: 파일 권한 변경 (읽기, 쓰기, 실행 권한)</li>
+            <li>chown: 파일 소유자 변경</li>
+            <li>sudo: 관리자 권한으로 명령어 실행</li>
+            <li>useradd 및 passwd: 사용자 추가 및 비밀번호 설정</li>
+        </ul>
+    </ul>
+
+    <h3>Vim 기본 사용법</h3>
+    <p>Vim은 모드 기반으로 동작합니다. 주요 모드는 다음과 같다:</p>
+    <ul>
+        <li><strong>1. 일반 모드 (Normal Mode)</strong>
+            <ul>
+                <li>기능: 커서 이동, 텍스트 삭제, 복사, 붙여넣기 등</li>
+                <li>진입 방법: Esc 키를 누르면 일반 모드로 돌아옴</li>
+                <li><strong>주요 명령어</strong>
+                    <ul>
+                        <li>h, j, k, l: 왼쪽, 아래, 위, 오른쪽으로 커서 이동</li>
+                        <li>x: 커서 위치의 문자 삭제</li>
+                        <li>dd: 현재 줄 삭제</li>
+                        <li>yy: 현재 줄 복사</li>
+                        <li>p: 붙여넣기</li>
+                        <li>u: 실행 취소</li>
+                        <li>Ctrl + r: 다시 실행</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li><strong>2. 입력 모드 (Insert Mode)</strong>
+            <ul>
+                <li>기능: 텍스트 입력</li>
+                <li>진입 방법
+                    <ul>
+                        <li>i: 커서 위치에서 입력 모드 시작</li>
+                        <li>a: 커서 다음 위치에서 입력 모드 시작</li>
+                        <li>o: 현재 줄 아래에 새 줄을 추가하고 입력 모드 시작</li>
+                    </ul>
+                </li>
+                <li>종료 방법: Esc 키를 눌러 일반 모드로 돌아온다</li>
+            </ul>
+        </li>
+
+        <li><strong>3. 명령 모드 (Command Mode)</strong>
+            <ul>
+                <li>기능: 파일 저장, 종료, 검색 등</li>
+                <li>진입 방법: 일반 모드에서 :를 입력</li>
+                <li><strong>주요 명령어</strong>
+                    <ul>
+                        <li>:w: 파일 저장</li>
+                        <li>:q: Vim 종료</li>
+                        <li>:wq: 파일 저장 후 종료</li>
+                        <li>:q!: 저장하지 않고 강제 종료</li>
+                        <li>:/검색어: 텍스트 검색</li>
+                        <li>:set nu: 줄 번호 표시</li>
+                        <li>:set nonu: 줄 번호 숨기기</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</article>
