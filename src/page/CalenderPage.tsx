@@ -8,7 +8,7 @@ const CalenderPage: React.FC = () => {
     useEffect(() => {
         if (date) {
             // 날짜에 해당하는 TIL 파일을 fetch로 불러옴
-            fetch(`/til/til_${date}.html`)
+            fetch(`${process.env.PUBLIC_URL}/til/til_${date}.html`)
                 .then((response) => {
                     if (!response.ok) {
                         throw new Error('파일을 찾을 수 없습니다.');
