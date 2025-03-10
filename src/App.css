@@ -1,0 +1,32 @@
+/* App.css */
+
+/* 전체 레이아웃을 flexbox로 설정 */
+.App {
+  display: flex;
+  /* Flexbox로 레이아웃 구성 */
+  min-height: 100vh;
+  /* 화면 높이에 맞추기 */
+}
+
+.content {
+  margin-left: 300px;
+  /* Sidebar 너비만큼 여백 추가 */
+  flex: 1;
+  /* 남은 공간을 차지 */
+  padding: 20px;
+  overflow-y: auto;
+  /* 화면에 내용이 길어져도 스크롤이 생기도록 */
+}
+
+/* 모바일 대응을 위한 예시 */
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+    /* 모바일에서는 세로 방향으로 배치 */
+  }
+
+  .content {
+    margin-left: 0;
+    /* 모바일에서는 sidebar 여백 제거 */
+  }
+}

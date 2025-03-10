@@ -1,0 +1,49 @@
+/* sidebar.css */
+
+/* Sidebar 기본 스타일 */
+.sidebar {
+    width: 250px;
+    /* Sidebar 너비 */
+    background-color: #333;
+    /* Sidebar 배경색 */
+    color: white;
+    /* 글자 색 */
+    padding: 20px;
+    position: fixed;
+    /* 화면에 고정 */
+    top: 0;
+    left: 0;
+    height: 100vh;
+    /* 화면 전체 높이 */
+    display: flex;
+    flex-direction: column;
+    /* 세로 방향으로 아이템 배치 */
+    justify-content: flex-start;
+}
+
+/* Sidebar 메뉴 항목 스타일 */
+.sidebar ul {
+    list-style-type: none;
+    /* 메뉴 목록 스타일 초기화 */
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    /* 링크 스타일 제거 */
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    color: #ddd;
+    /* hover 시 색상 변경 */
+}
+
+.sidebar button {
+    size: 20;
+}
