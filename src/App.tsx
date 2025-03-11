@@ -7,6 +7,7 @@ import About from './page/About';
 import Calender from './page/Calender';
 import Wallet from './page/Wallet';
 import CalenderPage from './page/CalenderPage';
+import Cronos from './static/Cronos';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/calender" element={<Calender />} />
             <Route path="/wallet" element={<Wallet />} /> {/* W -> Wallet로 수정 */}
             <Route path='/calender/:date' element={<CalenderPage />} />
+            <Route path='/cronos' element={<Cronos />} />
           </Routes>
         </div>
       </div>
