@@ -1,0 +1,82 @@
+import React from 'react';
+
+const TIL20250228: React.FC = () => {
+    return (
+        <article>
+            <h2>20250228 TIL</h2>
+
+            <h3>SPA (Single Page Application)</h3>
+            <ul>
+                <li>서버로부터 완전한 새로운 페이지를 불러오지 않고 페이지 갱신에 필요한 데이터만 받아 그 정보를 기준으로 현재의 페이지를 업데이트함으로써 사용자와 소통하는 웹 어플리케이션이나 웹 사이트</li>
+                <li>전체 페이지가 아니라 필요한 부분의 데이터만 받아서 화면을 업데이트 하면 되기 때문에 사용자와의 Interaction에 빠르게 반응한다</li>
+                <li>서버 과부하 문제가 줄어든다</li>
+                <li>SPA 경우 JS파일의 크기가 크므로 이 JS파일을 기다리는 시간으로 인해 첫 화면 로딩 시간이 길어진다</li>
+                <li>구글이나 네이버 같은 검색 엔진은 HTML 파일에 있는 자료를 분석하는 방식으로 검색기능이 구동하지만 SPA의 경우 HTML 파일은 별다른 자료가 없기 때문에 검색 엔진이 적절히 동작하지 못한다</li>
+            </ul>
+
+            <h3>Wireframe & Mockup</h3>
+            <ul>
+                <li>와이어프레임은 선을 이용해 윤곽선을 잡는 것을 말한다</li>
+                <li>목업은 데스크톱, 스마트폰의 프레임을 덧씌워 직관적으로 이해하기 쉽게 디자인한 것을 말한다</li>
+            </ul>
+
+            <h3>React Router</h3>
+            <ul>
+                <li>리엑트 애플리케이션에서 클라이언트 사이드 라우팅을 구현하기 위해 사용되는 가장 인기있는 라이브러리</li>
+                <li>단일 페이지 애플리케이션(SPA)에서 페이지 전환 없이 URL에 따라 다른 컴포넌트를 렌더링 할 수 있다</li>
+                <li>화면에 따라 주소도 달라지고 다른 주소에 따라 다른 뷰를 보여주는 과정을 라우팅이라고 한다</li>
+                <li>리액트 자체에는 이 기능이 내장되어 있지 않아 우리가 직접 주소마다 다른 뷰를 보여줘야 한다</li>
+                <li>그래서 React SPA에서는 라우팅을 위해 React Router라는 라이브러리를 가장 많이 사용한다</li>
+            </ul>
+
+            <h3>React Router 활용</h3>
+            <ul>
+                <li>React Router의 주요 컴포넌트는 크게 3가지로 나눌 수 있다</li>
+                <ul>
+                    <li>라우터 역할을 하는 BrowserRouter</li>
+                    <li>경로를 매칭해주는 Routes와 Route</li>
+                    <li>경로를 변경하는 역할을 하는 Link이다</li>
+                </ul>
+                <li>이 컴포넌트들을 사용하기 위해서 React Router 라이브러리에서 따로 불러와야 한다</li>
+                <li><code>{`import { BrowserRouter, Routes, Route, Link } from "react-router-dom";`}</code></li>
+
+
+                <li>import는 필요한 모듈을 불러오는 역할로 비구조화 할당과 비슷하게 이용할 수 있다</li>
+                <li>create-react-app으로 프로젝트 환경을 만들 수 있고 그 환경에 React Router 라이브러리도 npm 명령어를 통해 간단히 설치할 수 있다</li>
+                <ul>
+                    <li>npx create-react-app example</li>
+                    <li>cd example</li>
+                    <li>npm install react-router-dom</li>
+                </ul>
+                <li>App.js로 react-router 컴포넌트를 꺼내오기 위한 import 구문도 작성한다</li>
+                <li>React Router를 설정해준다</li>
+            </ul>
+
+            <h3>BrowserRouter</h3>
+            <ul>
+                <li>HTML5의 HistoryAPI를 사용해 페이지를 새로고침하지 않아도 주소를 변경할 수 있게 해준다</li>
+                <li>&lt;BrouserRouter&gt;가 상위에 작성되어 있어야 React Router의 컴포넌트들을 사용할 수 있다</li>
+                <li>ReactDOM의 랜더 단계인 index.js에 &lt;BrowserRouter&gt;를 넣어서 활용할 수 있다</li>
+            </ul>
+
+            <h3>Routes, Route</h3>
+            <ul>
+                <li>경로를 매칭해 주는 역할을 하는 컴포넌트</li>
+                <li>&lt;Routes&gt; 컴포넌트는 여러 &lt;Route&gt; 컴포넌트를 감싸서 그중 경로가 일치하는 단 하나의 라우터만 렌더링을 시켜주는 역할을 한다</li>
+                <li>&lt;Routes&gt;를 사용하지 않으면 매칭되는 모든 요소를 렌더링한다</li>
+                <li>&lt;Route&gt; 컴포넌트는 path 속성을 지정하여 해당 path에서 어떤 컴포넌트를 보여줄지 정하는데 &lt;link&gt; 컴포넌트가 정해주는 URL 경로가 일치하는 경우에만 작동된다</li>
+                <li>사용자가 지정된 주소 이외의 주소로 접근하게 되면 의도한 화면이 보이지 않을 수 있는데 이때 사용할 수 있는 속성이 path = “*”이다. 지정되지 않은 주소로 접근할 시에는 이 속성이 설정되어 있는 컴포넌트를 보여주게 된다</li>
+            </ul>
+
+            <h3>Link</h3>
+            <ul>
+                <li>경로를 연결해주는 역할을 하는 컴포넌트이다</li>
+                <li>페이지 전환을 통해 페이지를 새로 불러오지 않고 애플리케이션을 그대로 유지하여 HTML5 History API를 이용해 페이지의 주소만 변경해준다</li>
+                <li>ReactDOM으로 렌더를 시키게 되면 &lt;Link&gt; 컴포넌트는 &lt;a&gt; 요소로 바뀌는 모습을 볼 수 있다</li>
+                <li>&lt;link&gt; 컴포넌트는 &lt;a&gt;와 다르게 새로고침 없이 페이지 전환을 방지하는 기능이 내장되어 있기 때문에 SPA를 구현할 수 있다</li>
+            </ul>
+        </article>
+    );
+};
+
+export default TIL20250228;

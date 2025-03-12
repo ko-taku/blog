@@ -1,0 +1,235 @@
+import React from "react";
+
+const TIL20250220: React.FC = () => {
+    return (
+        <div>
+            <h2>20250220 TIL</h2>
+
+            <article>
+                <h3>Set</h3>
+                <ul>
+                    <li>Set을 사용하면 중복 제거와 빠른 조회가 가능하여 성능을 크게 향상</li>
+                    <li>Set은 탐색 시간이 일정한 시간이 걸리기 때문에 배열을 사용할 때보다 성능이 훨씬 뛰어나다</li>
+                </ul>
+
+                <h3>Set을 사용한 개선방법</h3>
+                <ul>
+                    <li>base 배열을 Set으로 변환하여 base.includes()를 대체</li>
+                    <pre>
+                        <code>
+                            {`function isSubsetOf(base, sample) {
+                const baseSet = new Set(base);  // base를 Set으로 변환
+                for (let i = 0; i < sample.length; i++) {
+                  if (!baseSet.has(sample[i])) {  // Set의 has() 메서드를 사용하여 빠르게 확인
+                    return false;  // sample[i]가 base에 없으면 바로 false 반환
+                  }
+                }
+                return true;  // 모든 값이 base에 있으면 true 반환
+              }`}
+                        </code>
+                    </pre>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Type</h3>
+                <ul>
+                    <li>JS에서 자료형(Type)은 값의 종류를 말한다</li>
+                    <li>크게 원시 자료형(primitive type)과 참조 자료형(reference type)으로 구분한다</li>
+                    <li>원시 자료형이 아닌 모든 자료형은 참조 자료형이다(배열, 객체, 함수)</li>
+                </ul>
+
+                <h3>원시 자료형의 특징</h3>
+                <ul>
+                    <li>6개의 자료형이 있다(number, string, boolean, undefined, null, symbol)</li>
+                    <li>원시 자료형을 변수에 할당하면 메모리 공간에 값 자체가 저장된다</li>
+                    <li>원시 값을 갖는 변수를 다른 변수에 할당하면 원시 값 자체가 복사되어 전달된다</li>
+                    <li>원시 자료형은 변경 불가능한 값이다</li>
+                    <li>한 번 생성된 원시 자료형은 읽기 전용 값이다</li>
+                    <li>원시 자료형은 신뢰성이 높다</li>
+                    <li>가비지 콜렉터가 사용하지 않는 값을 메모리에서 삭제한다</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>참조 자료형의 특징</h3>
+                <ul>
+                    <li>참조 자료형을 변수에 할당하면 메모리 공간에 주소값이 저장된다</li>
+                    <li>참조 값을 갖는 변수를 다른 변수에 할당하면 주소값이 복사되어 전달된다</li>
+                    <li>참조 자료형은 변경이 가능한 값이다</li>
+                    <li>참조 자료형을 저장하는 특별한 저장 공간을 힙이라고 한다</li>
+                </ul>
+
+                <h3>스코프(Scope)</h3>
+                <ul>
+                    <li>변수의 유효범위</li>
+                    <li>스코프는 중첩이 가능하다</li>
+                    <li>가장 바깥의 스코프 : 전역 스코프
+                        <ul>
+                            <li>전역 스코프에서 선언한 변수 : 전역 변수</li>
+                        </ul>
+                    </li>
+                    <li>모든 안쪽의 스코프 : 지역 스코프
+                        <ul>
+                            <li>지역 스코프에서 선언한 변수 : 지역 변수</li>
+                        </ul>
+                    </li>
+                    <li>지역 변수는 전역 변수보다 더 높은 우선순위를 가진다</li>
+                </ul>
+
+                <h3>블록 스코프(Block Scope)</h3>
+                <ul>
+                    <li>중괄호로 둘러싼 범위</li>
+                </ul>
+
+                <h3>함수 스코프(Function Scope)</h3>
+                <ul>
+                    <li>함수 선언식 및 함수 표현식에서 형성하는 스코프</li>
+                    <li>함수를 둘러싼 범위이다</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>window객체</h3>
+                <ul>
+                    <li>브라우저에만 존재하는 객체</li>
+                    <li>이 객체는 브라우저의 창을 의미하지만 전역 영역을 담고 있기도 한다</li>
+                    <li>함수 선언식으로 함수를 선언하거나 var로 선언된 전역변수 및 전역 함수는 window 객체에 속한다</li>
+                </ul>
+
+                <h3>주의사항</h3>
+                <ol>
+                    <li>전역 변수는 최소화
+                        <ul>
+                            <li>전역 변수는 편리한 대신 다른 함수 혹은 로직에 의해 의도되지 않은 변경이 발생할 수 있다</li>
+                            <li>애플리케이션을 만들 때 내가 직접 작성하지 않은 수많은 함수와 로직이 포함되어 side effect가 발생할 수 있다</li>
+                        </ul>
+                    </li>
+                    <li>let, const를 사용
+                        <ul>
+                            <li>var는 블록 스코프를 무시하고 같은 이름의 변수를 재선언해도 에러를 내지 않는다</li>
+                            <li>그러므로 let과 const를 사용하는 것이 좋다</li>
+                        </ul>
+                    </li>
+                    <li>선언 없는 변수 할당 금지
+                        <ul>
+                            <li>선언 없이 변수를 할당하면 해당 변수는 var로 선언한 전역 변수처럼 취급된다</li>
+                        </ul>
+                    </li>
+                    <li>Strict Mode 사용
+                        <ul>
+                            <li>js 파일 상단에 ‘use strict’ 입력하면 적용된다</li>
+                            <li>브라우저가 보다 엄격하게 작동하도록 만들어준다</li>
+                        </ul>
+                    </li>
+                    <li>타입스크립트 사용
+                        <ul>
+                            <li>타입스크립트는 이러한 문제를 해결하고 코드의 안정성을 높이는데 매우 유용하다</li>
+                        </ul>
+                    </li>
+                </ol>
+            </article>
+
+            <article>
+                <h3>클로저</h3>
+                <ul>
+                    <li>함수는 자신이 선언된 환경에 대한 참조를 가지고 있는데 이렇게 참조된 환경을 클로저라고 한다</li>
+                    <li>외부 함수의 변수에 접근할 수 있는 내부 함수</li>
+                    <li>클로저를 활용하면 클로저 함수 내에 데이터를 보존해 두고 사용할 수 있다</li>
+                </ul>
+
+                <h3>커링</h3>
+                <ul>
+                    <li>다수의 인자를 받는 함수를 여러 개의 단일 인자를 받는 함수로 변환하는 기술</li>
+                    <li>함수를 부분적으로 적용하여 점진적으로 인자를 받아 처리하는 방식</li>
+                    <li>커링된 함수는 첫 번째 인자를 받으면 또 다른 함수를 반환하고 반환된 함수는 두 번째 인자를 받는 방식으로 연쇄적으로 호출</li>
+                    <li>전체 프로세스의 일정 부분까지만 실행하는 경우 유용</li>
+                </ul>
+
+                <h3>모듈 패턴</h3>
+                <ul>
+                    <li>JS에 class가 없던 시절 모듈 패턴을 구현하기 위해 클로저를 사용</li>
+                    <li>하나의 기능을 온전히 수행하기 위한 모든 코드를 가지고 있는 코드 모음</li>
+                    <li>모듈은 다른 모듈에 의존적이지 않고 독립적이어야 한다</li>
+                    <li>외부 코드 실행을 통해서 모듈의 속성이 훼손받지 않아야 한다</li>
+                    <li>데이터를 다른 코드의 실행으로부터 보호하는 개념을 정보 은닉이라 하고 이는 캡슐화의 큰 특징이다</li>
+                </ul>
+
+                <h3>spread 문법</h3>
+                <ul>
+                    <li>주로 배열을 풀어서 인자로 전달하거나 배열을 풀어서 각각의 요소로 넣을 때에 사용</li>
+                    <li>spread 문법으로 병합 시 두 객체가 동일한 속성을 가지고 있다면 뒤에 나오는 객체의 속성 값이 앞의 객체의 속성 값을 덮어쓴다</li>
+                    <li>spread 문법은 기존 배열을 변경하지 않는다(immutable)</li>
+                    <li>…은 얕은 복사 방식이다</li>
+                </ul>
+
+                <h3>rest 문법</h3>
+                <ul>
+                    <li>파라미터를 배열의 형태로 받아서 사용할 수 있다</li>
+                    <li>자바스크립트는 (named parameter를 지원하지 않기 때문에) 함수 호출 시 인자의 순서가 중요하다</li>
+                    <li>파라미터의 개수가 가변적일 때 유용하다</li>
+                </ul>
+                <h3>화살표 함수</h3>
+                <ul>
+                    <li>ES6 등장 이후 새로운 함수를 정의하는 방법</li>
+                    <li>함수를 정의할 때 function 키워드 대신 화살표 =&gt를 사용한다</li>
+                    <li>매개변수가 한 개일 때, 소괄호를 생략할 수 있다</li>
+                    <li>단 매개변수가 없는 경우엔 소괄호를 생략할 수 없다</li>
+                    <li>함수 코드 블록 내부가 하나의 문으로 구성되어 있다면 중괄호를 생략할 수 있다</li>
+                    <li>중괄호가 생략될 때 블록 내부의 문이 값으로 평가될 수 있으면 return 키워드를 생략할 수 있다</li>
+                    <li>화살표 함수는 this를 자신이 정의된 시점의 this로 바인딩하기 때문에 this 바인딩을 하지 않는다고 할 수 있다</li>
+                    <li>이 때문에 this가 동적으로 바뀌지 않아 this문제에서 벗어날 수 있다</li>
+                    <li>화살표 함수는 arguments 객체를 가지지 않아 …rest 문법을 사용하여 가변 인자를 받을 수 있다</li>
+                    <li>화살표 함수는 생성자 함수를 사용할 수 없어서 new 키워드를 사용하여 인스턴스를 만들 수 없다</li>
+                    <li>화살표 함수는 간단한 콜백함수나 this가 고정되어 있는 경우 유용하며 생성자 함수로는 적합하지 않다</li>
+                </ul>
+
+                <h3>호이스팅</h3>
+                <ul>
+                    <li>JS에서 변수 선언과 함수 선언이 실행되기 전에 그 위치로 끌어올려지는 현상</li>
+                    <li>변수의 선언과 함수의 선언 위치가 코드에서 어디에 있느냐에 관계없이 호이스팅에 의해 코드의 상단에서 실행되는 것처럼 동작</li>
+                    <li>let과 const는 호이스팅이 일어나지만 초기화되지 않은 상태로 접근하면 TDZ 에러 발생</li>
+                    <li>그러므로 let과 const는 선언 전에 값에 접근할 수 없다</li>
+                    <li>함수 선언은 호이스팅에 의해 함수의 전체 정의가 끌어올려지기 때문에 함수 선언 전에 호출이 가능하다</li>
+                    <li>함수 표현식은 호이스팅되지 않으며 함수가 할당되기 전에 호출하면 오류가 발생</li>
+                </ul>
+
+                <h3>expect 사용법</h3>
+                <ul>
+                    <li>expect(테스트하는값).기대하는조건</li>
+                    <li>기대하는 조건에 해당하는 함수를 matcher라고 한다</li>
+                    <li>예시: <code>expect(isEven(3)).to.be.true</code> ⇒ ‘isEven(3)’은 참인 것이어야 한다 → <code>to.be.true</code></li>
+                    <li>예시: <code>expect(value).to.equal(3)</code> ⇒ 3과 같아야 한다 → <code>to.equal(3)</code></li>
+                    <li><code>.equal</code>은 두 값의 타입까지 엄격하게 같은지 검사한다</li>
+                </ul>
+
+                <h3>새로 알게된 점</h3>
+                <ul>
+                    <li>123-‘1’은 JS에서 ‘-1’이 숫자형으로 알아서 바뀌어져서 122가 된다</li>
+                    <li>1+true는 JS에서 true가 숫자형으로 바뀔 때 암묵적으로 1의 값을 가지므로 2가 된다</li>
+                    <li>객체에서 해당 속성이 없으면 JavaScript는 기본적으로 undefined를 반환 (delete 시)</li>
+                    <li>typeOf로 나온 결과는 ‘’ 안에 적혀진 형태다</li>
+                    <li><code>.deep.equal</code>은 배열의 요소나 객체의 속성이 서로 같은지 확인하는 matcher다</li>
+                    <li><code>deep.equal</code>은 배열이나 객체의 참조가 아닌 값을 비교한다</li>
+                    <li><code>equal</code>은 참조비교이기 때문에 배열 요소로 체크한다면 <code>deep.equal</code>을 사용해야 한다</li>
+                    <li><code>typeof</code> 연산자는 원시 타입의 데이터를 확인할 때 object를 반환한다</li>
+                    <li>배열인지 확인하고 싶으면 <code>Array.isArray()</code>를 사용해야 한다</li>
+                    <li><code>pop()</code> 메서드는 배열에서 마지막 요소를 제거하고 그 값을 반환한다</li>
+                    <li>배열에서 <code>slice(1)</code>은 인덱스 1부터 시작하여 배열 끝까지 복사한다</li>
+                    <li>배열에서 <code>slice(0, 1)</code>은 인덱스 0부터 인덱스 1까지 복사한다 (1은 포함되지 않는다)</li>
+                    <li><code>unshift()</code> : 배열의 앞에 하나 이상의 요소를 추가하는 메서드. 배열의 길이가 증가하고 기존 요소들은 한 칸씩 뒤로 밀린다</li>
+                    <li><code>shift()</code> : 배열의 첫 번째 요소를 제거하고 그 값을 반환하는 메서드. 배열의 길이가 감소하고 나머지 요소들이 앞으로 한 칸씩 밀린다</li>
+                    <li>객체에는 length 속성이 정의되지 않으므로 undefined이다</li>
+                    <li><code>in</code> 연산자는 객체에 특정 속성이 있는지 확인한다</li>
+                    <li><code>const copiedObj = Object.assign({ }, obj)</code>는 <code>obj</code> 객체의 얕은 복사본을 생성한다</li>
+                    <li><code>arguments</code>는 배열이 아닌 유사 배열 객체로 <code>.keys()</code>와 <code>Object.values()</code>를 사용하여 속성에 접근할 수 있다</li>
+                    <li><code>arguments</code> 객체는 각 인자에 대해 인덱스를 키로 갖는 속성을 가지며 값은 해당 인자이다</li>
+                    <li><code>arguments</code> 객체는 배열이 아니므로 <code>Array.from(argumentObj)</code>를 사용하여 배열로 변환할 수 있다</li>
+                    <li>spread가 <code>[]</code>일 때 전개 문법을 사용할 경우 <code>[]</code>로 전달된다</li>
+                </ul>
+            </article>
+        </div>
+    );
+};
+
+export default TIL20250220;
