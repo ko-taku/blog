@@ -17,6 +17,7 @@ const Sidebar: React.FC = () => {
                 <li><Link to="/calender"><EditCalendarRoundedIcon fontSize='large' /></Link>til</li>
                 <li><Link to="/wallet"><WalletRoundedIcon fontSize='large' /></Link>wallet</li>
                 <li><Link to="/Cronos"><CurrencyBitcoinRoundedIcon fontSize='large' /></Link>cronos</li>
+                <li><Link to="/ResearchCoin"><CurrencyBitcoinRoundedIcon fontSize='large' /></Link>ResearchCoin</li>
             </ul>
         </div>
     );

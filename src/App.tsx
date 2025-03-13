@@ -8,6 +8,7 @@ import Calender from './page/Calender';
 import Wallet from './page/Wallet';
 import CalenderPage from './page/CalenderPage';
 import Cronos from './static/Cronos';
+import ResearchCoin from './page/ResearchCoin';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/wallet" element={<Wallet />} /> {/* W -> Wallet로 수정 */}
             <Route path='/calender/:date' element={<CalenderPage />} />
             <Route path='/cronos' element={<Cronos />} />
+            <Route path='/ResearchCoin' element={<ResearchCoin />} />
           </Routes>
         </div>
       </div>
