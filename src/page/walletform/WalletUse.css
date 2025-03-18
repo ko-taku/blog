@@ -1,0 +1,233 @@
+/* 기본 레이아웃 */
+.container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 타이틀 스타일 */
+.title {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 입력 섹션 */
+.input-section {
+    display: flex;
+    align-items: center;
+    /* 입력과 버튼을 세로로 중앙 정렬 */
+    justify-content: space-between;
+    /* 공간을 자동으로 나누어 배치 */
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.inputPriviteKey {
+    width: 80%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+    /* 버튼과의 간격을 띄우기 위해 margin 추가 */
+}
+
+.Privatebutton {
+    background-color: #007bff;
+    width: 20%;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.label {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+
+
+
+
+/* 잔액, 송금 정보 표시 */
+/* 전체 섹션 */
+.balance-section {
+    background-color: #fff;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 잔액 정보 */
+.balance-info {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.balance-info p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 트랜잭션 섹션 */
+.transaction-section {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* 각 입력 필드 컨테이너 */
+.input-container {
+    margin-bottom: 15px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    /* padding을 포함하여 너비 계산 */
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* 송금 버튼 */
+.button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    border: none;
+    background-color: #28a745;
+    /* 녹색 */
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #218838;
+    /* 어두운 녹색 */
+}
+
+.button:disabled {
+    background-color: #6c757d;
+    /* 비활성화된 버튼 색상 */
+    cursor: not-allowed;
+}
+
+/* 가스비와 실제 송금액 정보 */
+.gas-info {
+    background-color: #f8f9fa;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.gas-info p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.gas-info strong {
+    font-weight: bold;
+}
+
+
+
+.transaction-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.transaction-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* 트랜잭션 해시 링크 */
+.transaction-hash {
+    font-size: 16px;
+    word-wrap: break-word;
+    /* 긴 텍스트가 넘어가면 줄바꿈 */
+    word-break: break-word;
+    /* 더 강력한 줄바꿈을 위해 추가 */
+    margin-top: 10px;
+    text-align: center;
+}
+
+.transaction-hash a {
+    word-wrap: break-word;
+    word-break: break-word;
+    text-decoration: none;
+    color: #17a2b8;
+    /* 링크 색상 */
+}
+
+.transaction-hash a:hover {
+    text-decoration: underline;
+}
+
+/* 거래 내역 */
+.transaction-history {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.transaction-history button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.transaction-history button:hover {
+    background-color: #0056b3;
+}
+
+/* iframe 스타일 */
+.transaction-history-frame {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Wallet: React.FC = () => {
     return (
         <div>
-            <h2>About Wallet</h2>
-            <p>Learn more wallet us on this page.</p>
+            <div><Link to="/CreateWallet">createWallet</Link></div>
+            <div><Link to="/WalletUse">WalletUse</Link>월렛유즈</div>
+
         </div>
     );
 };

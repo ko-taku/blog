@@ -1,0 +1,170 @@
+/* CreateWallet.css */
+.create-wallet-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.create-wallet-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.create-wallet-btn:hover {
+    background-color: #0056b3;
+}
+
+.private-key-section {
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.completeText {
+    color: #0056b3;
+}
+
+.addressTitle {
+    color: #28a745;
+}
+
+.privateKeyText {
+    color: #495057;
+    margin-right: 80px;
+}
+
+.private-key-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.private-key-input {
+    width: 75%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    color: #555;
+    cursor: not-allowed;
+    text-align: center;
+}
+
+.copy-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copy-btn:hover {
+    background-color: #218838;
+}
+
+.copy-success {
+    color: #28a745;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.balance-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.balance-btn {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 30%;
+    /* 너비를 자동으로 설정해서 버튼의 크기를 내용에 맞게 합니다 */
+    align-self: flex-start;
+    margin-top: 0;
+    transition: background-color 0.3s ease;
+}
+
+.balance-btn:hover {
+    background-color: #138496;
+}
+
+.balance-info {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+    align-self: flex-end;
+    margin-right: 10px;
+}
+
+.use-wallet-btn {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+
+.use-wallet-btn:hover {
+    background-color: #495057;
+    /* hover 시 밝은 회색 (어두운 회색에서 좀 더 밝은 느낌) */
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    .create-wallet-container {
+        padding: 20px;
+    }
+
+    .create-wallet-btn,
+    .balance-btn,
+    .use-wallet-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .private-key-input {
+        width: 60%;
+    }
+}

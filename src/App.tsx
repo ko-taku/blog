@@ -9,10 +9,13 @@ import Wallet from './page/Wallet';
 import CalenderPage from './page/CalenderPage';
 import Cronos from './static/Cronos';
 import ResearchCoin from './page/ResearchCoin';
+import CreateWallet from './page/walletform/CreateWallet';
+import WalletUse from './page/walletform/WalletUse';
+
 
 function App() {
   return (
-    <BrowserRouter> {/* Router를 BrowserRouter로 변경 */}
+    <BrowserRouter basename="/blog"> {/* Router를 BrowserRouter로 변경 */}
       <div className="App">
         <Sidebar />
         <div className="content">
@@ -24,6 +27,8 @@ function App() {
             <Route path='/calender/:date' element={<CalenderPage />} />
             <Route path='/cronos' element={<Cronos />} />
             <Route path='/ResearchCoin' element={<ResearchCoin />} />
+            <Route path='/CreateWallet' element={<CreateWallet />} />
+            <Route path='/WalletUse' element={<WalletUse />} />
           </Routes>
         </div>
       </div>
