@@ -152,7 +152,7 @@ const WalletUse: React.FC = () => {
 
                     <div className="gas-info">
                         <p><strong>가스비</strong> {gasPrice} ETH</p>
-                        <p><strong>실제 송금액</strong> {finalAmount} KAIA</p>
+                        <p><strong>실제 송금액</strong> {parseFloat(finalAmount).toFixed(5)}  KAIA</p>
                     </div>
                     <div>
                         <button className="button" onClick={sendTransactionFromPrivateKey} disabled={isSending}>
@@ -184,7 +184,7 @@ const WalletUse: React.FC = () => {
                     <p><strong>From</strong> {sentFrom}</p>
                     <p><strong>To</strong> {sentRecipient}</p>
                     <p><strong>Price</strong> {sentAmount} KAIA</p>
-                    <p><strong>Gas</strong> {gasFee} Ether</p>
+                    <p><strong>Gas</strong> {parseFloat(gasFee).toString().replace(/\.?0+$/, '')} Ether</p>
                     <p><strong>Time</strong> {sentTime}</p>
                 </div>
             )}

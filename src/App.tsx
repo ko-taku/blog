@@ -11,6 +11,7 @@ import Cronos from './static/Cronos';
 import ResearchCoin from './page/ResearchCoin';
 import CreateWallet from './page/walletform/CreateWallet';
 import WalletUse from './page/walletform/WalletUse';
+import Explorer from './page/Explorer';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path='/ResearchCoin' element={<ResearchCoin />} />
             <Route path='/CreateWallet' element={<CreateWallet />} />
             <Route path='/WalletUse' element={<WalletUse />} />
+            <Route path='/Explorer' element={<Explorer />} />
           </Routes>
         </div>
       </div>
