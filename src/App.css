@@ -10,13 +10,15 @@
 }
 
 .content {
-  margin-left: 300px;
+  margin-left: 290px;
   /* Sidebar 너비만큼 여백 추가 */
   flex: 1;
   /* 남은 공간을 차지 */
-  padding: 20px;
+  padding: 0;
   overflow-y: auto;
   /* 화면에 내용이 길어져도 스크롤이 생기도록 */
+  min-height: 100vh;
+  /* 최소 높이를 전체 화면으로 설정 */
 
 
 }

@@ -1,0 +1,111 @@
+.home-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    background-image: url('../image/backpage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 콘텐츠 영역 */
+.home-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* 제목 스타일 - 밝은 녹색 계열로 수정 */
+.home-title {
+    font-size: 44px;
+    margin-bottom: 50px;
+    color: darkblue;
+}
+
+.card-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #66cc66;
+    /* 밝은 녹색 */
+}
+
+/* 본문 텍스트 스타일 */
+.home-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* 카드 목록 스타일 */
+.home-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* 카드 스타일 */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+}
+
+/* 카드 hover 시 효과 */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 카드 본문 텍스트 스타일 */
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* 테이블 스타일 */
+.tech-stack-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tech-stack-table th,
+.tech-stack-table td {
+    padding: 12px 15px;
+    text-align: center;
+    /* 가운데 정렬 추가 */
+    border: 1px solid #ddd;
+}
+
+.tech-stack-table th {
+    background-color: #f2f2f2;
+    font-size: 18px;
+    color: #555;
+}
+
+.tech-stack-table td {
+    font-size: 16px;
+    color: #333;
+}
+
+.tech-stack-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tech-stack-table tr:hover {
+    background-color: #f1f1f1;
+}

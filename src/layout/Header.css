@@ -1,0 +1,61 @@
+/* header.css */
+
+/* Header 기본 스타일 */
+.header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* 로고 스타일 */
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* 헤더 내 액션 항목들 (검색, 알림, 사용자 버튼 등) */
+.header .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 검색 바 */
+.header .search-bar {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    width: 200px;
+    font-size: 16px;
+}
+
+/* 알림 버튼 */
+.header .notification-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 사용자 버튼 */
+.header .user-btn {
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.header .user-btn:hover {
+    background-color: #555;
+}
