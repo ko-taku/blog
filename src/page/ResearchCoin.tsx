@@ -1,5 +1,5 @@
 import React from 'react';
-import './ResearchCoin.css';
+import './css/ResearchCoin.css';
 
 const ResearchCoin: React.FC = () => {
 
@@ -7,7 +7,7 @@ const ResearchCoin: React.FC = () => {
     const rHBDisUrl = 'https://miro.medium.com/max/1400/1*8ZZ0XQdH9Bu344sA1tN39Q.png';
     return (
         <div>
-            <img className='HubImg' src={researchHubUrl} width={350} height={250} />
+            <img className='HubImg' src={researchHubUrl} width={350} height={250} alt="" />
             <ul className='list'>
                 <li className='liList'>ResearchHub는 학술 연구의 공유, 협업, 및 보상 시스템을 제공하는 블록체인 기반 플랫폼</li>
                 <li className='liList'>연구자들은 자신이 작성한 논문이나 데이터를 업로드하고, 이를 피드백하거나 수정하여 연구의 품질을 개선</li>
@@ -25,7 +25,7 @@ const ResearchCoin: React.FC = () => {
                 <li className='liList'>연구자들의 기여도에 따라 토큰 보상 결정</li>
             </ul>
 
-            <img className='HubDis' src={rHBDisUrl} width={380} height={300} />
+            <img className='HubDis' src={rHBDisUrl} width={380} height={300} alt="" />
 
             <h2 className='theme'>스테이킹과 거버넌스</h2>
             <ul className='list'>

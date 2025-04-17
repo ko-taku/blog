@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Chart as ChartJS, Title, Tooltip, Legend, LineElement, PointElement, CategoryScale, LinearScale } from 'chart.js';
 import { Line } from 'react-chartjs-2';  // Chart.js와 React 통합
 import { ChartOptions, ChartTypeRegistry } from 'chart.js'; // Chart.js의 Options 타입 임포트
-import './Explorer.css';
+import './css/Explorer.css';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import moment from 'moment-timezone';
 

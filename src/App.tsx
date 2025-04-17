@@ -12,7 +12,7 @@ import ResearchCoin from './page/ResearchCoin';
 import CreateWallet from './page/walletform/CreateWallet';
 import WalletUse from './page/walletform/WalletUse';
 import Explorer from './page/Explorer';
-
+import Nft from './page/Nft';
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
             <Route path='/CreateWallet' element={<CreateWallet />} />
             <Route path='/WalletUse' element={<WalletUse />} />
             <Route path='/Explorer' element={<Explorer />} />
+            <Route path='/Nft' element={<Nft />} />
           </Routes>
         </div>
       </div>

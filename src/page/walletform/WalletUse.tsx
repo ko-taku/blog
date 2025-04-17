@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Web3 from 'web3';
-import './WalletUse.css';  // CSS 파일 import
+import '../css/WalletUse.css';  // CSS 파일 import
 
 const web3 = new Web3('https://public-en-kairos.node.kaia.io');
 

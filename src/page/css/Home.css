@@ -4,7 +4,7 @@
     color: #333;
     padding: 0;
     margin: 0;
-    background-image: url('../image/backpage.jpg');
+    background-image: url('../../image/backpage.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

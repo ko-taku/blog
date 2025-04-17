@@ -6,6 +6,7 @@ import PersonSharpIcon from '@mui/icons-material/PersonSharp';
 import EditCalendarRoundedIcon from '@mui/icons-material/EditCalendarRounded';
 import WalletRoundedIcon from '@mui/icons-material/WalletRounded';
 import CurrencyBitcoinRoundedIcon from '@mui/icons-material/CurrencyBitcoinRounded';
+import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
 
 const Sidebar: React.FC = () => {
     return (
@@ -19,6 +20,7 @@ const Sidebar: React.FC = () => {
                 <li><Link to="/Cronos"><CurrencyBitcoinRoundedIcon fontSize='large' /></Link>cronos</li>
                 <li><Link to="/ResearchCoin"><CurrencyBitcoinRoundedIcon fontSize='large' /></Link>ResearchCoin</li>
                 <li><Link to="/Explorer"><CurrencyBitcoinRoundedIcon fontSize='large' /></Link>Explorer</li>
+                <li><Link to="/Nft"><AddPhotoAlternateOutlinedIcon fontSize='large' /></Link>Nft</li>
             </ul>
         </div>
     );

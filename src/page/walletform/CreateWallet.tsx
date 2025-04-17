@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Web3 from 'web3';
 import WalletInfo from './WalletInfo';
 import { Link } from 'react-router-dom';  // Link 컴포넌트 임포트
-import './CreateWallet.css';  // CSS 파일 import
+import '../css/CreateWallet.css';  // CSS 파일 import
 
 const CreateWallet: React.FC = () => {
     const web3 = new Web3('https://holesky.infura.io/v3/b4aecef1425645f7ac7cfb92acc55bcd');
