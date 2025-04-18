@@ -24,3 +24,5 @@ yarn-error.log*
 
 # .env 파일은 Git에 포함되지 않도록 설정
 .env
+
+src/page/nftComponent/nftJson/
