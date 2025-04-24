@@ -121,7 +121,7 @@ const Token: React.FC = () => {
 
                                 }}
                             /> */}
-                            {/* 민팅 탭에 Mint 컴포넌트 추가 */}
+                            {/* 민팅 탭에 Mint 컴포넌트 추가 수정 필요*/}
                             {/* {file && name && symbol && description && (
                                 <Mint
                                     file={file}
