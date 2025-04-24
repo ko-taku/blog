@@ -59,8 +59,7 @@ const Nft: React.FC = () => {
 
 
     return (
-        <div className="container">
-            <h2 className="title">NFT</h2>
+        <div>
 
             {/* 탭 메뉴 */}
             <div className="tabs">
@@ -80,71 +79,75 @@ const Nft: React.FC = () => {
                     </>
                 )}
             </div>
+            <div className="container">
+                <h2 className="title">NFT</h2>
 
-            {/* 탭 1 - 지갑 연결 */}
-            {activeTab === 1 && (
-                <div className="tab-content">
-                    <label className="label">Private Key</label>
-                    <div className="input-section">
-                        <input
-                            type="password"
-                            className="inputPriviteKey"
-                            value={privateKey}
-                            onChange={(e) => setPrivateKey(e.target.value)}
-                            placeholder="프라이빗 키 입력"
-                        />
-                        <button className="Privatebutton" onClick={handlePrivateKeyValidation}>지갑 연결</button>
-                    </div>
-                </div>
-            )}
-
-            {/* 탭 2 - NFT 정보 */}
-            {activeTab === 2 && (
-                <div className="tab-content">
-                    {wallet ? (
-                        <>
-                            <h3>NFT 지갑 정보</h3>
-                            <p><strong>주소:</strong> {wallet.address}</p>
-                            <p><strong>잔액:</strong> {balance} KAIA</p>
-                        </>
-                    ) : (
-                        <p className="info">❗ 지갑을 먼저 연결해주세요.</p>
-                    )}
-                </div>
-            )}
-
-            {/* 탭 3 - 민팅 */}
-            {activeTab === 3 && (
-                <div className="tab-content">
-                    {wallet ? (
-                        <>
-                            <Upload
-                                onFormDataReady={({ file, name, symbol, description, attributes }) => {
-                                    setFile(file);
-                                    setName(name);
-                                    setSymbol(symbol);
-                                    setDescription(description);
-                                    setAttributes(attributes);
-
-
-                                }}
+                {/* 탭 1 - 지갑 연결 */}
+                {activeTab === 1 && (
+                    <div className="tab-content">
+                        <label className="label">Private Key</label>
+                        <div className="input-section">
+                            <input
+                                type="password"
+                                className="inputPriviteKey"
+                                value={privateKey}
+                                onChange={(e) => setPrivateKey(e.target.value)}
+                                placeholder="프라이빗 키 입력"
                             />
-                            {/* 민팅 탭에 Mint 컴포넌트 추가 */}
-                            {file && name && symbol && description && (
-                                <Mint
-                                    file={file}
-                                    name={name}
-                                    symbol={symbol}
-                                    description={description}
-                                    attributes={attributes}
+                            <button className="Privatebutton" onClick={handlePrivateKeyValidation}>지갑 연결</button>
+                        </div>
+                    </div>
+                )}
+
+                {/* 탭 2 - NFT 정보 */}
+                {activeTab === 2 && (
+                    <div className="tab-content">
+                        {wallet ? (
+                            <>
+                                <h3>NFT 지갑 정보</h3>
+                                <p><strong>주소:</strong> {wallet.address}</p>
+                                <p><strong>잔액:</strong> {balance} KAIA</p>
+                            </>
+                        ) : (
+                            <p className="info">❗ 지갑을 먼저 연결해주세요.</p>
+                        )}
+                    </div>
+                )}
+
+                {/* 탭 3 - 민팅 */}
+                {activeTab === 3 && (
+                    <div className="tab-content">
+                        {wallet ? (
+                            <>
+                                <Upload
+                                    onFormDataReady={({ file, name, symbol, description, attributes }) => {
+                                        setFile(file);
+                                        setName(name);
+                                        setSymbol(symbol);
+                                        setDescription(description);
+                                        setAttributes(attributes);
+
+
+                                    }}
                                 />
-                            )}
-                        </>
-                    ) : (
-                        <p className="info">❗ 지갑을 먼저 연결해야 민팅할 수 있습니다.</p>
-                    )}
-                </div>
-            )}
+                                {/* 민팅 탭에 Mint 컴포넌트 추가 */}
+                                {file && name && symbol && description && (
+                                    <Mint
+                                        file={file}
+                                        name={name}
+                                        symbol={symbol}
+                                        description={description}
+                                        attributes={attributes}
+                                        wallet={wallet}
+                                    />
+                                )}
+                            </>
+                        ) : (
+                            <p className="info">❗ 지갑을 먼저 연결해야 민팅할 수 있습니다.</p>
+                        )}
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
