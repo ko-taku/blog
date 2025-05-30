@@ -18,8 +18,7 @@ const Sidebar: React.FC = () => {
                 <li><Link to="/about"><PersonSharpIcon fontSize='large' /></Link>introduce</li>
                 <li><Link to="/calender"><EditCalendarRoundedIcon fontSize='large' /></Link>til</li>
                 <li><Link to="/wallet"><WalletRoundedIcon fontSize='large' /></Link>wallet</li>
-                <li><Link to="/Cronos"><CurrencyBitcoinRoundedIcon fontSize='large' /></Link>cronos</li>
-                <li><Link to="/ResearchCoin"><CurrencyBitcoinRoundedIcon fontSize='large' /></Link>ResearchCoin</li>
+                <li><Link to="/coinInfo"><CurrencyBitcoinRoundedIcon fontSize='large' /></Link>coinInfo</li>
                 <li><Link to="/Explorer"><CurrencyBitcoinRoundedIcon fontSize='large' /></Link>Explorer</li>
                 <li><Link to="/Nft"><AddPhotoAlternateOutlinedIcon fontSize='large' /></Link>Nft</li>
                 <li><Link to="/Token"><TokenIcon fontSize='large' /></Link>Token</li>

@@ -7,13 +7,16 @@ import About from './page/About';
 import Calender from './page/Calender';
 import Wallet from './page/Wallet';
 import CalenderPage from './page/CalenderPage';
-import Cronos from './static/Cronos';
-import ResearchCoin from './page/ResearchCoin';
+import Cronos from './page/coinInfo/Cronos';
+import ResearchCoin from './page/coinInfo/ResearchCoin';
 import CreateWallet from './page/walletform/CreateWallet';
 import WalletUse from './page/walletform/WalletUse';
 import Explorer from './page/Explorer';
 import Nft from './page/Nft';
 import Token from './page/Token';
+import CoinInfo from './page/CoinInfo';
+import ConsensusMechanisms from './page/coinInfo/ConsensusPage';
+import ConsensusPage from './page/coinInfo/ConsensusPage';
 
 function App() {
   return (
@@ -27,8 +30,10 @@ function App() {
             <Route path="/calender" element={<Calender />} />
             <Route path="/wallet" element={<Wallet />} /> {/* W -> Wallet로 수정 */}
             <Route path='/calender/:date' element={<CalenderPage />} />
-            <Route path='/cronos' element={<Cronos />} />
-            <Route path='/ResearchCoin' element={<ResearchCoin />} />
+            <Route path='/coinInfo' element={<CoinInfo />} />
+            <Route path='/coinInfo/researchCoin' element={<ResearchCoin />} />
+            <Route path='/coinInfo/cronos' element={<Cronos />} />
+            <Route path='/coinInfo/consensusPage' element={<ConsensusPage />} />
             <Route path='/CreateWallet' element={<CreateWallet />} />
             <Route path='/WalletUse' element={<WalletUse />} />
             <Route path='/Explorer' element={<Explorer />} />
